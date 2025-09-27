@@ -202,7 +202,7 @@ nav a:hover {
 /* Hero szekció */
 .hero {
     height: 100vh;
-    background: url('forset-fog.jpg') center center/cover no-repeat;
+    background: url('/images/forset-fog.jpg') center center/cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -674,7 +674,7 @@ header .visible-header {
 
 /* Footer */
 .site-footer {
-  background-image: url('footer1.png');
+  background-image: url('/images/footer1.png');
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
