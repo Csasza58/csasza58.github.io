@@ -46,21 +46,34 @@ function startPageAnimations() {
 
 
 
-
-/* ==== Get Started gomb kezelése ==== */
-document.getElementById('getStarted').addEventListener('click', function() {
-    alert('Köszönjük az érdeklődést! Hamarosan jelentkezünk további információval.');
-});
-
-
 /* ==== Hamburger menü és mobil navigáció ==== */
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('nav');
 
-hamburger.addEventListener('click', () => {
-  navMenu.classList.toggle('open');
-  hamburger.classList.toggle('active'); // opcionális animációhoz
-});
+console.log('Hamburger:', hamburger);
+console.log('NavMenu:', navMenu);
+
+if (hamburger && navMenu) {
+  hamburger.addEventListener('click', () => {
+    console.log('Hamburger clicked');
+    navMenu.classList.toggle('open');
+    hamburger.classList.toggle('active'); // opcionális animációhoz
+    console.log('Nav open:', navMenu.classList.contains('open'));
+  });
+} else {
+  console.log('Hamburger or nav not found');
+}
+
+        // Close menu when clicking outside (mobile)
+        document.addEventListener('click', (event) => {
+            const isClickInsideNav = navMenu.contains(event.target);
+            const isClickOnHamburger = hamburger.contains(event.target);
+            if (!isClickInsideNav && !isClickOnHamburger && navMenu.classList.contains('open')) {
+                navMenu.classList.remove('open');
+                hamburger.classList.remove('active');
+            }
+        });
+
 
 
 /* ==== Végtelen szöveg görgetés (Marquee) implementáció ==== */
@@ -260,4 +273,15 @@ document.addEventListener('DOMContentLoaded', () => {
   // ha kell, előbb felvesszük a fade-in osztályt:
   document.querySelectorAll('body > *').forEach(el => el.classList.add('fade-in'));
   initGlobalFadeIn();
+});
+
+/* ==== Smooth scroll for anchor links ==== */
+document.querySelectorAll('a[href^="#about"]').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector('#about');
+    const topOffset = 60; // Például header magassága (px), ha kell
+    const y = target.getBoundingClientRect().top + window.pageYOffset - topOffset;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  });
 });

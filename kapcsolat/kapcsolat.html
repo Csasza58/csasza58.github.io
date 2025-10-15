@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!-- Magyar nyelvű weboldal -->
+<html lang="hu">
+
+<!-- Dokumentum fejléc: meták, cím és külső erőforrások -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>1507. | Kapcsolat</title>
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="kap-style.css" />
+</head>
+
+<body>
+  <!-- Betöltési képernyő: cserkészliliom forgó animációval -->
+  <div id="loading-screen">
+    <div class="loading-content">
+      <img src="../images/liliom.svg" alt="Cserkészliliom" class="loading-lily" />
+    </div>
+  </div>
+
+  <!-- Fejléc: logó, navigáció és hamburger menü mobil nézethez -->
+  <header>
+    <!-- Logó struktúra:
+         - SVG kép a cserkészliliommal
+         - Hosszú szöveg normál nézethez
+         - Rövid szöveg mobil nézethez
+    -->
+    <div class="logo">
+      <a href="index.html">
+      <img src="../images/liliom.svg" alt="Cserkészliliom" class="svg-logo" />
+      <span class="logo-text">
+        1507. Árpádházi<br>Szent Margit <br>Cserkészcsapat
+      </span>
+      <span class="logo-short-text" style="display:none;">
+        ÁSzMCsCs
+      </span>
+      </a>
+    </div>
+    <!-- Hamburger menü:
+         - Három vízszintes vonal
+         - Aria-label az akadalýmentességhez
+         - Mobilnézetben jelenik meg
+    -->
+    <button class="hamburger" aria-label="menü megnyitása">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav>
+      <a href="../index.html">Főoldal</a>
+      <a href="#about">Rólunk</a>
+        <a href="../blog/">Blog</a>
+        <a href="../blog/signin.php">Belépés</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero szekció: Nagy háttérkép és főcím -->
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <h1><span class="explore">Fedezd fel</span> <span class="the-world">a természetet</span></h1>
+      </div>
+    </section>
+
+    <!-- Rólunk szekció: Cserkeszcsapat bemutatkozás -->
+    <section id="about" class="about-section">
+      <div class="about-container">
+        <h2 class="section-title">Rólunk</h2>
+        <p class="about-description">
+          Mi vagyunk az <strong>1507. Árpádházi Szent Margit Cserkészcsapat</strong>, egy lelkes és összetartó közösség
+          Szegeden,
+          akik a természetet és a kalandokat helyezzük előtérbe. Célunk, hogy a fiatalokat megismertessük a
+          természettel,
+          közösségi és önálló kalandokon keresztül.
+        </p>
+        <p class="about-join">
+          Csatlakozz hozzánk, és éld át a természetközeli élményeket velünk!
+        </p>
+      </div>
+    </section>
+  </main>
+
+<!-- Lábléc: Kapcsolat, navigáció és copyright információk -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <div class="footer-logo-content">
+          <img src="../images/liliom.svg" alt="Csapat logó" class="footer-logo-img" />
+          <span>1507. Árpádházi Szent Margit Cserkészcsapat</span>
+        </div>
+        <p class="footer-tagline">Fedezd fel a természetet velünk! Csatlakozz cserkészcsapatunkhoz.</p>
+      </div>
+
+      <nav class="footer-nav">
+        <h3 class="footer-nav-title">Navigáció</h3>
+        <div class="footer-nav-links">
+          <a href="#">Főoldal</a>
+          <a href="#">Rólunk</a>
+          <a href="#">Események</a>
+          <a href="#">Kapcsolat</a>
+        </div>
+      </nav>
+
+      <div class="footer-social">
+        <h3 class="footer-social-title">Kövess minket</h3>
+        <div class="footer-social-links">
+          <a href="https://facebook.com" aria-label="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://instagram.com" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <p class="footer-copy">&copy; 2025 | 1507. Árpádházi Szent Margit Cserkészcsapat. Minden jog fenntartva.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript betöltése az interaktív funkciókhoz -->
+  <script src="kap-script.js"></script>
+</body>
+
+</html

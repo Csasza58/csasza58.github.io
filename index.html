@@ -3,25 +3,26 @@
 <html lang="hu">
 
 <!-- Dokumentum fejléc: meták, cím és külső erőforrások -->
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>1507. | ÁSzMCsCs</title>
-  <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+  <title>1507. | Főoldal</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-   <!-- Betöltési képernyő: cserkészliliom forgó animációval -->
-   <div id="loading-screen">
-     <div class="loading-content">
-       <img src="/images/liliom.svg" alt="Cserkészliliom" class="loading-lily" />
-     </div>
-   </div>
+  <!-- Betöltési képernyő: cserkészliliom forgó animációval -->
+  <div id="loading-screen">
+    <div class="loading-content">
+  <img src="blog/images/liliom.svg" alt="Cserkészliliom" class="loading-lily" />
+    </div>
+  </div>
 
-   <!-- Fejléc: logó, navigáció és hamburger menü mobil nézethez -->
+  <!-- Fejléc: logó, navigáció és hamburger menü mobil nézethez -->
   <header>
     <!-- Logó struktúra:
          - SVG kép a cserkészliliommal
@@ -29,29 +30,31 @@
          - Rövid szöveg mobil nézethez
     -->
     <div class="logo">
-      <img src="/images/liliom.svg" alt="Cserkészliliom" class="svg-logo" />
-      <span class="logo-text">
-        1507. Árpádházi<br>Szent Margit <br>Cserkészcsapat
-      </span>
-      <span class="logo-short-text" style="display:none;">
-        ÁSzMCsCs
-      </span>
+      <a href="">
+        <img src="blog/images/liliom.svg" alt="Cserkészliliom" class="svg-logo" />
+        <span class="logo-text">
+          1507. Árpádházi<br>Szent Margit <br>Cserkészcsapat
+        </span>
+        <span class="logo-short-text" style="display:none;">
+          ÁSzMCsCs
+        </span>
+      </a>
     </div>
     <!-- Hamburger menü:
          - Három vízszintes vonal
          - Aria-label az akadalýmentességhez
          - Mobilnézetben jelenik meg
     -->
-    <button class="hamburger" aria-label="menü megnyitása">
+    <button type="button" class="hamburger" aria-label="menü megnyitása">
       <span></span>
       <span></span>
       <span></span>
     </button>
     <nav>
-      <a href="#">Főoldal</a>
-      <a href="#">Rólunk</a>
-      <a href="#">Kapcsolat</a>
-      <a href="#">Belépés</a>
+      <a href="blog/index.php">Blog</a>
+      <a href="#about">Rólunk</a>
+      <a href="kapcsolat/kapcsolat.html">Kapcsolat</a>
+      <a href="blog/signin.php">Belépés</a>
     </nav>
   </header>
 
@@ -108,24 +111,34 @@
 
     <!-- Galéria: Körkörös képváltó animációval -->
     <section class="gallery-circle-slider">
-  <h2>Galéria</h2>
-  <div class="circle-slider-container">
-    <button class="prev-circle" aria-label="Előző kép">&#10094;</button>
-    <!-- Képváltó wrapper:
+      <h2>Galéria</h2>
+      <div class="circle-slider-container">
+        <button class="prev-circle" aria-label="Előző kép">&#10094;</button>
+        <!-- Képváltó wrapper:
          - data-index attribútum a pozícionáláshoz
          - Háttérképek körkörös elrendezésben
          - 3D transzformációk a térhatásért
     -->
-    <div class="slider-wrapper">
-      <div class="slide-circle" data-index="0" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80');"></div>
-      <div class="slide-circle" data-index="1" style="background-image: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80');"></div>
-      <div class="slide-circle" data-index="2" style="background-image: url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=800&q=80');"></div>
-      <div class="slide-circle" data-index="3" style="background-image: url('https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=800&q=80');"></div>
-      <div class="slide-circle" data-index="4" style="background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80');"></div>
-    </div>
-    <button class="next-circle" aria-label="Következő kép">&#10095;</button>
-  </div>
-</section>
+        <div class="slider-wrapper">
+          <div class="slide-circle" data-index="0"
+            style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80');">
+          </div>
+          <div class="slide-circle" data-index="1"
+            style="background-image: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80');">
+          </div>
+          <div class="slide-circle" data-index="2"
+            style="background-image: url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=800&q=80');">
+          </div>
+          <div class="slide-circle" data-index="3"
+            style="background-image: url('https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=800&q=80');">
+          </div>
+          <div class="slide-circle" data-index="4"
+            style="background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80');">
+          </div>
+        </div>
+        <button class="next-circle" aria-label="Következő kép">&#10095;</button>
+      </div>
+    </section>
 
 
     <!-- Adó 1% felajánlás: Támogatási lehetőség -->
@@ -147,7 +160,7 @@
     <div class="footer-content">
       <div class="footer-logo">
         <div class="footer-logo-content">
-          <img src="/images/liliom.svg" alt="Csapat logó" class="footer-logo-img" />
+          <img src="blog/images/liliom.svg" alt="Csapat logó" class="footer-logo-img" />
           <span>1507. Árpádházi Szent Margit Cserkészcsapat</span>
         </div>
         <p class="footer-tagline">Fedezd fel a természetet velünk! Csatlakozz cserkészcsapatunkhoz.</p>
@@ -156,10 +169,10 @@
       <nav class="footer-nav">
         <h3 class="footer-nav-title">Navigáció</h3>
         <div class="footer-nav-links">
-          <a href="#">Főoldal</a>
-          <a href="#">Rólunk</a>
+          <a href="blog/">Blog</a>
+          <a href="#about">Rólunk</a>
           <a href="#">Események</a>
-          <a href="#">Kapcsolat</a>
+          <a href="kapcsolat/kapcsolat.html">Kapcsolat</a>
         </div>
       </nav>
 
@@ -176,7 +189,7 @@
   </footer>
 
   <!-- JavaScript betöltése az interaktív funkciókhoz -->
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 
 </html
