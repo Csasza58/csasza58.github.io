@@ -1,0 +1,161 @@
+/* Admin Panel Mobile Sidebar - CSAK MOBILON */
+
+/* Desktop: rejtjük a toggle gombokat */
+@media (min-width: 769px) {
+    .sidebar__toggle {
+        display: none !important;
+    }
+}
+
+/* Mobil nézet: 768px alatt */
+@media (max-width: 768px) {
+    .dashboard__container {
+        position: relative;
+        width: 100%;
+    }
+    
+    
+    /* Sidebar - mobilon slide-in */
+    .dashboard__container aside {
+        position: fixed !important;
+        left: -100% !important;
+        top: 0 !important;
+        width: 75vw !important;
+        max-width: 320px !important;
+        height: 100vh !important;
+        background: var(--primary-dark) !important;
+        z-index: 10000 !important;
+        transition: left 0.4s ease !important;
+        padding: 5rem 0 2rem 0 !important;
+        overflow-y: auto !important;
+        box-shadow: 4px 0 20px rgba(0, 0, 0, 0.5) !important;
+    }
+    
+    /* Sidebar menü elemek */
+    .dashboard__container aside ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .dashboard__container aside ul li {
+        margin: 0;
+    }
+    
+    .dashboard__container aside ul li a {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1.2rem 1.5rem;
+        color: var(--text-white);
+        text-decoration: none;
+        transition: all 0.3s ease;
+        border-left: 4px solid transparent;
+    }
+    
+    .dashboard__container aside ul li a:hover,
+    .dashboard__container aside ul li a.active {
+        background: var(--primary-medium);
+        border-left-color: var(--accent-warm);
+    }
+    
+    .dashboard__container aside ul li a i {
+        font-size: 1.3rem;
+    }
+    
+    .dashboard__container aside ul li a h5 {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+    
+    /* Sidebar NYITOTT állapot */
+    .dashboard__container aside.open {
+        left: 0 !important;
+    }
+    
+    /* TOGGLE GOMB - csak mobilon látszik */
+    #sidebar-toggle-btn {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        position: fixed !important;
+        left: -5px !important;
+        top: 100px !important;
+        width: 50px !important;
+        height: 50px !important;
+        background: var(--primary-dark) !important;
+        border: none !important;
+        border-radius: 0 50% 50% 0 !important;
+        color: var(--text-white) !important;
+        font-size: 1.8rem !important;
+        cursor: pointer !important;
+        z-index: 100001 !important;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3) !important;
+        transition: all 0.4s ease !important;
+        outline: none !important;
+    }
+    
+    #sidebar-toggle-btn:hover {
+        left: 0px !important;
+        transform: scale(1.05);
+    }
+    
+    #sidebar-toggle-btn:focus {
+        outline: none !important;
+    }
+    
+    /* Amikor sidebar NYITOTT */
+    body.sidebar-open #sidebar-toggle-btn {
+        left: calc(75vw - 55px) !important;
+        box-shadow: none !important;
+    }
+    
+    /* Ikon rotáció */
+    #sidebar-toggle-btn i,
+    #sidebar-toggle-btn::before {
+        content: "❯";
+        transition: transform 0.4s ease;
+        display: inline-block;
+    }
+    
+    body.sidebar-open #sidebar-toggle-btn i,
+    body.sidebar-open #sidebar-toggle-btn::before {
+        transform: rotate(180deg);
+    }
+    
+    /* Overlay háttér */
+    .sidebar-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 9998;
+        backdrop-filter: blur(3px);
+    }
+    
+    .sidebar-overlay.active {
+        display: block;
+    }
+    
+    /* Main content */
+    .dashboard__container main {
+        width: 100%;
+        padding: 1rem;
+    }
+    
+    /* Amikor sidebar nyitott, body scrolling letiltva */
+    body.sidebar-open {
+        overflow: hidden;
+    }
+}
+
+/* Tablet nézet */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .dashboard__container aside {
+        width: 250px;
+    }
+}

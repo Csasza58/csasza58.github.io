@@ -1,0 +1,222 @@
+/* Form styles */
+.form__section {
+    display: grid;
+    place-items: center;
+    min-height: calc(100vh - 60px);
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.form__section-container {
+    width: 95vw;
+    max-width: 450px;
+    background: var(--primary-dark);
+    padding: 3rem;
+    border-radius: var(--card-border-radius-2);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+/* Admin form styles */
+.dashboard__container form {
+    background: var(--primary-dark);
+    padding: 2rem;
+    border-radius: var(--card-border-radius-2);
+    margin-top: 1rem;
+}
+
+.form__section-container h2 {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    font-size: 1.7rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.form__section input {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-light);
+    padding: 0.8rem 1.4rem;
+    border-radius: var(--card-border-radius-1);
+    margin-bottom: 0.5rem;
+}
+
+/* Input field styles */
+.form__section input,
+.form__section textarea,
+.form__section select,
+.dashboard__container input,
+.dashboard__container textarea,
+.dashboard__container select {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-light);
+    padding: 0.8rem 1.4rem;
+    border-radius: var(--card-border-radius-1);
+    margin-bottom: 0.5rem;
+    width: 100%;
+}
+
+/* Placeholder styles */
+.form__section input::placeholder,
+.form__section textarea::placeholder,
+.dashboard__container input::placeholder,
+.dashboard__container textarea::placeholder {
+    color: var(--text-light);
+    opacity: 0.7;
+}
+
+/* Label styles */
+.form__section label,
+.dashboard__container label {
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+    display: block;
+    font-weight: 500;
+}
+
+/* Small text styles */
+.form__section small,
+.dashboard__container small {
+    color: var(--text-light);
+    opacity: 0.9;
+    text-align: center;
+    display: block;
+    margin-top: 1rem;
+}
+
+.form__section small a {
+    color: var(--accent-warm);
+    text-decoration: underline;
+}
+
+.form__section .btn {
+    background: var(--accent-warm);
+    color: var(--text-dark);
+    font-weight: 600;
+    margin-top: 1rem;
+    width: 100%;
+    min-height: 48px; /* Érinthetőség mobil eszközökön */
+}
+
+/* Mobil optimalizálás - erős felülírás */
+@media screen and (max-width: 768px) {
+    .form__section {
+        padding: 1rem !important;
+        min-height: 100vh !important;
+    }
+    
+    .form__section-container {
+        padding: 2rem !important;
+        margin: 0.5rem auto !important;
+        max-width: calc(100% - 1rem) !important;
+        width: auto !important;
+        min-width: 320px !important;
+    }
+    
+    .form__section-container h2 {
+        font-size: 1.5rem !important;
+        margin-bottom: 1.5rem !important;
+        text-align: center !important;
+    }
+    
+    .form__section input {
+        padding: 1rem !important;
+        margin-bottom: 1rem !important;
+        font-size: 16px !important; /* Megakadályozza a zoom-ot iOS-en */
+        width: 100% !important;
+        box-sizing: border-box !important;
+        min-height: 48px !important;
+    }
+    
+    .form__section .btn {
+        padding: 1rem !important;
+        font-size: 1rem !important;
+        margin-top: 1.5rem !important;
+        width: 100% !important;
+        min-height: 48px !important;
+        box-sizing: border-box !important;
+    }
+    
+    .form__section small {
+        font-size: 0.9rem !important;
+        margin-top: 1.5rem !important;
+        text-align: center !important;
+    }
+}
+
+/* Tablet nézet */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .form__section-container {
+        padding: 2.5rem !important;
+        max-width: 80% !important;
+        margin: 2rem auto !important;
+    }
+    
+    .form__section input {
+        padding: 0.9rem 1.3rem !important;
+        margin-bottom: 0.8rem !important;
+    }
+}
+
+/* Extra kis képernyők */
+@media screen and (max-width: 480px) {
+    .form__section {
+        padding: 0.5rem !important;
+    }
+    
+    .form__section-container {
+        padding: 1.5rem !important;
+        margin: 0.25rem auto !important;
+        max-width: calc(100% - 0.5rem) !important;
+    }
+    
+    /* Bejelentkezési form specifikus javítások kis képernyőkön */
+    .form__section form {
+        width: 100% !important;
+    }
+    
+    .form__section form input[type="text"],
+    .form__section form input[type="password"] {
+        -webkit-appearance: none !important;
+        -moz-appearance: none !important;
+        appearance: none !important;
+        border-radius: 8px !important;
+    }
+}
+
+/* ULTRA ERŐS MOBIL FELÜLÍRÁS - CACHE BUSTING */
+.form__section-container {
+    width: 90vw !important;
+    min-width: 300px !important;
+    max-width: 90vw !important;
+}
+
+@media only screen and (max-width: 600px) {
+    .form__section {
+        padding: 0.5rem !important;
+    }
+    
+    .form__section-container {
+        width: 90vw !important;
+        max-width: 90vw !important;
+        margin: 0 auto !important;
+        padding: 1.5rem !important;
+    }
+}
+
+/* Desktop bejelentkezési form - keskenyebb teljes képernyőn */
+@media screen and (min-width: 1200px) {
+    .form__section-container {
+        max-width: 450px !important;
+        width: 450px !important;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .form__section-container {
+        max-width: 450px !important;
+        width: 450px !important;
+    }
+}
